@@ -14,10 +14,12 @@ const searchReturn = function(req,res) {
           res.send(e)
         }
         else if (data){
-          res.send(data)
+          console.log("Data");
+          res.send(JSON.parse(data).statuses)
         }
-        else if(res){
-          res.send(result)
+        else if(result){
+          console.log("Result");
+          res.send(result.statuses)
         }
       }
   );
